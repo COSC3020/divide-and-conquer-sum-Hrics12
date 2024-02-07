@@ -4,7 +4,7 @@ function divideAndConquerSum(arr) {
         return 0;
     //returns the only value in the array
     if (arr.length === 1)
-        return [0];
+        return arr[0];
     //Take the length of array and splits into thirds
     var cent1 = math.round(arr.length / 3);
     //Takes a third of array and multiplies it by 2 to get the last 3rd of array
