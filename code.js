@@ -6,7 +6,7 @@ function divideAndConquerSum(arr) {
     if (arr.length === 1)
         return arr[0];
     //Take the length of array and splits into thirds
-    var cent1 = math.round(arr.length / 3);
+    var cent1 = Math.round(arr.length / 3);
     //Takes a third of array and multiplies it by 2 to get the last 3rd of array
     var cent2 = cent1 * 2;
 
