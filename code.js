@@ -1,4 +1,4 @@
-function DivCon(arr) {
+function divideAndConquer(arr) {
     //returns 0 because there is nothing to sort
     if (arr.length === 0)
         return 0;
@@ -11,7 +11,7 @@ function DivCon(arr) {
     var cent2 = cent1 * 2;
 
     //Recursive call running the function in each 3rd of the array
-    return DivCon(arr.slice(0, cent1)) + DivCon(arr.slice(cent1, cent2)) + DivCon(arr.slice(cent2));
+    return divideAndConquer(arr.slice(0, cent1)) + divideAndConquer(arr.slice(cent1, cent2)) + divideAndConquer(arr.slice(cent2));
 }
 
 
