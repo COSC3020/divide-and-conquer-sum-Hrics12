@@ -26,3 +26,41 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+
+From the code the base case is:
+T(0)=1
+T(1)=1
+
+It's a recursive call if 'n' is greater then 1. Then it makes 3 recursive calls on the array to divide it into 3 equal sizes equaling
+n/3. So, T(n)=3*T(n/3) + C. T(n/3) is the recursive calls made, (n/3) is the size of the array.
+
+$\ T(n)=3 \cdot T\left(\frac{n}{3}\right) + C $
+$\ T\left(\frac{n}{3}\right) = 3\cdot \left(3\cdot T \left(\frac{n}{9}\right)+c\right) + c $
+
+$\ T\left(\frac{n}{3}\right) =3^{2} \cdot T\left(\frac{n}{9}\right) + 3c + C $
+$\ T\left(\frac{n}{9}\right) = 3^{3} \cdot T\left){n}{27}\right) + 3^{2}c + 3c + C $
+
+So the pattern is:
+$\ T(n) = 3^{k} \cdot T(\frac{n}{3^{k}}) + c\cdot \sum_{i=0}^{k-1} 3^{i} $
+
+The finding the value for K:
+$\ \frac{n}{3^{k}} = 1 $
+
+That gives you:
+$\ k= \log_3 n $
+
+Putting k back into the pattern:
+$\ T\left(n\right) = 3^{\log_3 n} \cdot T \left(1\right) + c\cdot \sum_{i=0}^{\log_3 n-1} 3^{i} $
+
+The geometric series from the summation is:
+
+$\ \frac{n-1}{2} $
+
+So, $\ T \left(n\right) = n \cdot{T\left(1\right)} + C \cdot\frac{n-1}{2} $
+
+We know  $\ T\left(1\right) $ is constant 
+
+So, $\ \frac {n-1}{2} $ the domanate term is n.
+
+Then $\ T\left(n\right) \in \Theta\left(n\right) $ 
