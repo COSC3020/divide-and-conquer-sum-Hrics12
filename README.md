@@ -64,3 +64,6 @@ We know  $\ T\left(1\right) $ is constant
 So, $\ \frac {n-1}{2} $ the domanate term is n.
 
 Then $\ T\left(n\right) \in \Theta\left(n\right) $ 
+
+I used this to help me understand:
+https://github.com/COSC3020/divide-and-conquer-sum-ziyuWang6666/blob/e538a1b529472e4def078ba3504390b532f6027f/code.js
